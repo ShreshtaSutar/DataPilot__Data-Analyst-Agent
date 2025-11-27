@@ -1,130 +1,145 @@
-# ⚡ Data Analyst Agent — Your AI-Powered Data Companion  
-> Smarter, faster, and more intuitive analysis of your datasets using **Generative AI + Python magic.**  
-> Repository: *github.com/ShreshtaSutar/data-analyst-agent.git*
+# 🚀 **DataPilot – Data Analyst Agent**
+
+### **Your AI-Powered Data Companion**
+
+An intelligent, end-to-end data analysis assistant that processes datasets, answers business questions, generates insights, and produces visual reports — all with the power of **Generative AI + Python**.
 
 ---
 
-## 📌 What Is This?
-Meet **Data Analyst Agent 2.0** — an AI-driven assistant that eliminates tedious data crunching.  
-Upload your dataset + queries, and instantly get:  
-✅ Visual reports  
-✅ AI-generated insights  
-✅ Automated workflows  
+## ⭐ **Why DataPilot?**
 
-Perfect for:  
-- Analysts 🧾  
-- Researchers 🔬  
-- Startups & Businesses 📈  
-- Anyone who loves turning raw data into knowledge  
+Modern data analysis is time-consuming. DataPilot automates the heavy lifting with:
 
----
+* 🧠 AI-driven analytics
+* 📊 Automated visualizations
+* ⚡ Instant insights from your datasets
+* 🌐 Web scraping for dynamic data
+* 📝 Multi-question batch processing
 
-## ✨ Key Highlights  
-
-| Feature                  | Why It’s Awesome 🚀 |
-|---------------------------|----------------------|
-| 🤖 AI-Powered Insights    | Uses Google’s Generative AI to “understand” your data |
-| 📊 Rich Visualizations    | Generates plots with **Seaborn & Matplotlib** |
-| 🌍 Web Scraper Mode       | Fetch live data directly from URLs |
-| 📂 Multi-Format Friendly  | Accepts CSV, Excel, JSON, Parquet, or TXT |
-| 🔄 Ask Many at Once       | Batch processing for multiple questions |
-| 🖥️ Simple-to-Use Interface | Beginner friendly, no steep learning curve |
-| ⚡ Super-Fast Execution   | Optimized for speed + real-time feedback |
+Perfect for **analysts, researchers, students, business teams, and interview demonstrations.**
 
 ---
 
-## 🚀 Getting Started  
+## ✨ **Core Features**
 
-### 1️⃣ Clone the Repo  - git clone https://github.com/ShreshtaSutar/data-analyst-agent.git
-cd data-analyst-agent
-
-### 2️⃣ Install Requirements  - pip install -r requirements.txt
-
-### 3️⃣ Configure API Keys  
-Create a `.env` file inside the root folder:  
-GEMINI_API_KEY=your_google_api_key
-LLM_TIMEOUT_SECONDS=240
-
-
-### 4️⃣ Start the Application  - python -m uvicorn app:app --reload
-
-Now open [**http://localhost:8000/**](http://localhost:8000/) in your browser 🌐  
-
-## 🧑‍💻 How It Works  
-
-1. **Write Your Questions**  
-   Create a `.txt` file with queries like:  What’s the revenue growth month-over-month?, Find correlation between Age and Income, Show most profitable products...etc
-
-2. **Upload Dataset + Questions File**  
-- Dataset (optional) → CSV, Excel, JSON, Parquet, or TXT  
-- Questions file (required) → Plain text  
-
-3. **Voilà!**  
-- AI processes the queries  
-- Generates insights + summaries  
-- Builds neat visualizations  
+| Feature                             | Description                                                                            |
+| ----------------------------------- | -------------------------------------------------------------------------------------- |
+| 🤖 **Generative AI Insights**       | Understands datasets and answers natural-language questions using Google Generative AI |
+| 📈 **Automatic Visual Reports**     | Clean graphs using Matplotlib & Seaborn                                                |
+| 📂 **Multi-Format Dataset Support** | CSV, Excel, JSON, Parquet, TXT                                                         |
+| 📝 **Batch Query Mode**             | Upload multiple questions in a single `.txt` file                                      |
+| 🌍 **Web Scraper Integration**      | Extract insights directly from live URLs                                               |
+| ⚡ **FastAPI-Powered Backend**       | Ultra-fast, async-friendly API                                                         |
+| 🖥️ **Simple & Modern UI**          | Built with HTML, CSS, JavaScript                                                       |
+| 🔒 **Secure Local Execution**       | No cloud storage — your data stays with you                                            |
 
 ---
 
-## 🛠 Tech Behind the Scenes  
+## 📦 **Project Structure**
 
-### Backend  
-- FastAPI ⚡ → High-performance web server  
-- LangChain 🧠 → Orchestrates LLM interactions  
-- Google Generative AI ✨ → Core AI engine  
-- Pandas + NumPy 📊 → Data wrangling made smooth  
-- Seaborn + Matplotlib 🎨 → Clean, insightful charts  
-
-### Frontend  
-- HTML5 + CSS + JavaScript  
-- Bootstrap-inspired modern UI  
-
----
-
-## 🔧 API Blueprint  
-
-| Method | Endpoint  | Purpose |
-|--------|-----------|----------|
-| `GET`  | `/`       | Access web app |
-| `POST` | `/api`    | Submit dataset + questions |
-| `GET`  | `/summary`| App diagnostics & summaries |
+```
+DataPilot
+│── app.py                 # FastAPI backend
+│── chain.py               # LangChain logic
+│── templates/
+│── static/                # Frontend UI
+│── utils/                 # Helpers + scrapers
+│── requirements.txt
+│── README.md
+```
 
 ---
 
-## 📂 File Support  
+## 🧠 **How DataPilot Works**
 
-| Format | Extensions |
-|--------|------------|
-| CSV    | `.csv`     |
-| Excel  | `.xlsx`, `.xls` |
-| JSON   | `.json`    |
-| Parquet| `.parquet` |
-| Text   | `.txt`     |
+1. **Prepare your questions**
+   Create a `.txt` file with queries such as:
 
----
+   * “Find correlation between Age and Income”
+   * “Show sales trends over months”
+   * “Generate distribution plot for Profit”
 
-## 🎯 Where Can You Use This?  
+2. **Upload your dataset**
+   Formats supported: CSV, Excel, JSON, Parquet, TXT.
 
-- 📈 Business Strategy – Sales, KPIs, forecasts  
-- 🔬 Research – Data exploration, hypothesis validation  
-- 🤖 Data Science – Quick EDA, anomaly detection  
-- 📊 Reporting – Automated dashboards  
+3. **Upload your questions file** (required)
+
+4. **Let the AI analyze**
+   DataPilot reads, processes, visualizes, and generates insights automatically.
 
 ---
 
-## 🔒 Security First  
-- ✅ No cloud storage → All data stays local  
-- ✅ API keys kept safe via `.env`  
-- ✅ Configurable CORS policy for production use  
+## ⚙️ **Tech Stack**
+
+### **Backend**
+
+* 🧠 Google Generative AI
+* 🧩 LangChain
+* ⚡ FastAPI
+* 📊 Pandas / NumPy
+* 🎨 Seaborn + Matplotlib
+
+### **Frontend**
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap-styled UI
 
 ---
 
-## 📜 License  
+## 📡 **API Endpoints**
 
-Licensed under **MIT** – free for personal & commercial use. 
+| Method | Endpoint   | Purpose                    |
+| ------ | ---------- | -------------------------- |
+| `GET`  | `/`        | UI Home Page               |
+| `POST` | `/api`     | Upload dataset + questions |
+| `GET`  | `/summary` | System / app overview      |
 
+---
 
+## 📄 **Supported File Types**
 
+| Type    | Extensions      |
+| ------- | --------------- |
+| CSV     | `.csv`          |
+| Excel   | `.xlsx`, `.xls` |
+| JSON    | `.json`         |
+| Parquet | `.parquet`      |
+| Text    | `.txt`          |
 
+---
 
-  
+## 🎯 **Use Cases**
+
+* 📈 **Business Analytics** → KPI analysis, sales insights
+* 🔍 **Exploratory Data Analysis (EDA)**
+* 🧪 **Research & Experiments**
+* 🤖 **Data Science Quick Prototyping**
+* 📊 **Automated Reporting**
+
+---
+
+## 🔐 **Security**
+
+✔ No external data logging
+✔ API keys stored in `.env`
+✔ Safe local execution
+✔ CORS-configurable for production
+
+---
+
+## 🛠 **Future Enhancements (Roadmap)**
+
+* 🧮 SQL Query Mode
+* 💹 Dashboard-style inference
+* 🧠 Plug-and-play LLM selection
+* 🗂 Auto-data cleaning module
+
+---
+
+## 📜 **License**
+
+Licensed under the **MIT License** — code reuse is restricted unless permitted.
+
+---
