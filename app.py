@@ -41,7 +41,7 @@ except Exception:
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.tools import tool
-from langchain.agents import create_tool_calling_agent, AgentExecutor
+from langchain.agents import create_openai_tools_agent, AgentExecutor
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -485,7 +485,7 @@ You must:
     MessagesPlaceholder(variable_name="agent_scratchpad"),
 ])
 
-agent = create_tool_calling_agent(
+agent = create_openai_tools_agent(
     llm=llm,
     tools=[scrape_url_to_dataframe],  # let the agent call tools if it wants; we will also pre-process scrapes
     prompt=prompt
