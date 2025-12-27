@@ -453,9 +453,13 @@ def plot_to_base64(max_bytes=100000):
 #     temperature=0,
 #     google_api_key=os.getenv("GOOGLE_API_KEY")
 # )
-# -------------------- Initialize LLM --------------------
-llm = LLMWithFallback(temperature=0)
-# -----------------------------
+
+# -------------------- Initialize LLM (SAFE & SUPPORTED) --------------------
+llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-flash",
+    temperature=0
+)
+# --------------------------------------------------------------------------
 
 # Tools list for agent (LangChain tool decorator returns metadata for the LLM)
 tools = [scrape_url_to_dataframe]  # we only expose scraping as a tool; agent will still produce code
@@ -485,9 +489,9 @@ You must:
     MessagesPlaceholder(variable_name="agent_scratchpad"),
 ])
 
-agent = create_openai_tools_agent(
+agent = create_tool_calling_agent(
     llm=llm,
-    tools=[scrape_url_to_dataframe],  # let the agent call tools if it wants; we will also pre-process scrapes
+    tools=[scrape_url_to_dataframe],
     prompt=prompt
 )
 
