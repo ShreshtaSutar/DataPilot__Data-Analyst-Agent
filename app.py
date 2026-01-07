@@ -457,7 +457,8 @@ def plot_to_base64(max_bytes=100000):
 # -------------------- Initialize LLM (SAFE & SUPPORTED) --------------------
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
-    temperature=0
+    temperature=0,
+    google_api_key=os.getenv("AIzaSyCt0LjkKgaHhgZAljBom1Igm9tSIuVI8O4")
 )
 # --------------------------------------------------------------------------
 
