@@ -44,6 +44,9 @@ from langchain_core.tools import tool
 from langchain.agents import create_openai_tools_agent, AgentExecutor
 
 load_dotenv()
+
+print("GOOGLE_API_KEY visible:", bool(os.getenv("GOOGLE_API_KEY")))
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
